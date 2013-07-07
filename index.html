@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="quizz">
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen">
+    <style type="text/css" media="screen">
+      body {
+        background-color: #333;
+        color: white;
+      }
+      .question {
+        border: 1px solid #aaa;
+        padding: 5px;
+      }
+    </style>
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/angular-resource.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/quizz.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1><a href="#/">Quizz</a></h1>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div ng-view class="span8 offset2"></div>
+      </div>
+    </div>
+  </body>
+</html>

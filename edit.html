@@ -1,0 +1,17 @@
+<form>
+  <label for="Title">Title:</label>
+  <input ng-model="question.title" class="span6" type="text" id="Title">
+  <label for="Description">Description:</label>
+  <textarea ng-model="question.description" class="span6" id="Description" rows="8" cols="40">
+  </textarea>
+
+  <ul class="unstyled">
+    <li ng-repeat="answer in question.answers">
+      <label for="q-{{answer.id}}">{{answer.id}})</label>
+      <input ng-model="answer.text" class="span6" type="text" id="q-{{answer.id}}">
+    </li>
+  </ul>
+
+  <a ng-click="cancel()" href="">Cancel</a>
+  <button ng-click="save()" class="btn-primary">Save</button>
+</form>

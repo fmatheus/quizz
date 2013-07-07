@@ -1,0 +1,6 @@
+<h2>Listing all questions</h2>
+<div class="question" ng-repeat="question in questions">
+  <button ng-click="newQuestion()" class="btn-primary pull-right">New question</button>
+  <h2><a href="#/view/{{question.id}}">[{{question.id}}] {{question.title}}</a></h2>
+</div>
+

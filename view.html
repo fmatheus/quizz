@@ -1,0 +1,13 @@
+<a href="#/edit/{{question.id}}" class="pull-right btn" href="">Edit</a>
+<h2>{{question.title}}</h2>
+<p>{{question.description}}</p>
+<ul class="unstyled">
+  <p ng-repeat="answer in question.answers">
+    <span class="badge badge-info">{{answer.count}}</span>
+    <input type="radio" name="choice" ng-model="question.choice" ng-click="choice(answer.id)"
+    id="answer-{{answer.id}}" value="{{answer.id}}">
+    <label for="answer-{{answer.id}}" class="help-inline">{{answer.id}}) {{answer.text}}</label>
+  </p>
+</ul>
+
+<p>Your choice was {{question.choice}} </p>
